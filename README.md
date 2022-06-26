@@ -6,6 +6,7 @@ In Commit 1.1 we made a data which consists of an array containing Objects, in t
 We then use the map function to map our data.products into jsx and use the slug as a key while also styling and setting classes.
 
 -- Version 1.1b
+Installed react-router-dom
 This a relatively smaller change because I want to be able to look back at this later and make sure I understand this.
 So what we did here was add our routes using React-Router-Dom. Moved the old design that was in app.js to HomeScreen.js so now when you click on products it brings you to a blank page of the slug. we then added a route with the path of /product/:slug and an element of another screen we made called ProductScreens.js
 
