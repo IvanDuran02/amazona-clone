@@ -24,3 +24,7 @@ In this update we start the setup of the backend express server. we have it runn
 -- Version 1.4
 Installed Axios - Frontend
 in package.json we set our proxy to localhost:5000, which is our backend address, then we installed axios and put it in a useEffect hook so that it can fetch the JSON from our backend endpoint of /api/products which then gets stored in a useState hook.
+
+-- Version 1.5
+Installed use-reducer-logger
+In this patch we implemented useReducer with the 3 cases of fetch,request, and fail. we then replaced the old useState code with our new reducer in our fetchData function. after setting everything up we added some render conditions for a loading and error screen before showing the data to user.
