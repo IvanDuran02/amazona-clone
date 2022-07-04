@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 
 import axios from "axios";
 import Product from "../components/Product";
+import { Helmet } from "react-helmet-async";
 
 const reducer = (state, action) => {
   switch (
@@ -47,6 +48,9 @@ function HomeScreen() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>Amazona</title>
+      </Helmet>
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
@@ -56,7 +60,7 @@ function HomeScreen() {
         ) : (
           <Row>
             {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={2} className="mb-3">
+              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
                 <Product product={product}></Product>
               </Col>
             ))}

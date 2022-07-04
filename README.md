@@ -35,3 +35,7 @@ In this patch we started the design of the site utilizing some bootstrap compone
 
 -- Version 1.7 --
 This update consisted of further designing with bootstrap, specifically, making products its own component, moved out of HomeScreen, and also made a rating component for reviews. Other than that we added bootstrap Buttons, Columns, and Card Bodies.
+
+-- Version 1.8 --
+Installed react-helmet-async.
+Implemented product details page. Updated webpage titles using helmet package, in backend we added an API endpoint to return product information based on their slug.
