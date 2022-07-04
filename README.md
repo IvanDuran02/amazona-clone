@@ -28,3 +28,10 @@ in package.json we set our proxy to localhost:5000, which is our backend address
 -- Version 1.5 --
 Installed use-reducer-logger.
 In this patch we implemented useReducer to replace useState to manage complex states in the homescreen with the 3 cases of fetch,request, and fail. we then replaced the old useState code with our new reducer in our fetchData function. after setting everything up we added some render conditions for a loading and error screen before showing the data to user.
+
+-- Version 1.6 --
+Installed react-bootstrap && react-router-bootstrap
+In this patch we started the design of the site utilizing some bootstrap components, like container, and navbar.
+
+-- Version 1.7 --
+This update consisted of further designing with bootstrap, specifically, making products its own component, moved out of HomeScreen, and also made a rating component for reviews. Other than that we added bootstrap Buttons, Columns, and Card Bodies.
