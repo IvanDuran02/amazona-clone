@@ -1,5 +1,4 @@
 import { useEffect, useReducer } from "react";
-import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 // import logger from "use-reducer-logger"; // logger is for debugging
@@ -7,6 +6,8 @@ import Col from "react-bootstrap/Col";
 import axios from "axios";
 import Product from "../components/Product";
 import { Helmet } from "react-helmet-async";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
 
 const reducer = (state, action) => {
   switch (
@@ -18,7 +19,8 @@ const reducer = (state, action) => {
       return { ...state, products: action.payload, loading: false };
     case "FETCH_FAIL": // if the case fails, return previous state and error message inside action.payload
       return { ...state, loading: false, error: action.payload };
-    default: // if the action isn't equal to 3 values above return current state.
+    default:
+      // if the action isn't equal to 3 values above return current state.
       return state;
   }
 };
@@ -54,9 +56,11 @@ function HomeScreen() {
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
-          <div>Loading...</div>
+          <div>
+            <LoadingBox />
+          </div>
         ) : error ? (
-          <div>{error}</div>
+          <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <Row>
             {products.map((product) => (

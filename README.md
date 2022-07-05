@@ -39,3 +39,6 @@ This update consisted of further designing with bootstrap, specifically, making 
 -- Version 1.8 --
 Installed react-helmet-async.
 Implemented product details page. Updated webpage titles using helmet package, in backend we added an API endpoint to return product information based on their slug.
+
+-- Version 1.9 --
+Added loading spinner and error alert. loading spinner shows loading inbetween pages and error alert shows if product slug isn't found. Other than that we made a utils.js and put logic to grab error response from backend and deliver it for use in frontend.

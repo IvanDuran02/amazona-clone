@@ -10,14 +10,10 @@ app.get("/api/products", (req, res) => {
 });
 
 app.get("/api/products/slug/:slug", (req, res) => {
-  // returns product information based on the slug of the product.
-  // by adding :slug we can grab the slug that the user entered
-  const product = data.products.find((x) => x.slug === req.params.slug); // finds products with requested slug
+  const product = data.products.find((x) => x.slug === req.params.slug);
   if (product) {
-    // if they exsist send product
     res.send(product);
   } else {
-    // else send an error message.
     res.status(404).send({ message: "Product Not Found" });
   }
 });
