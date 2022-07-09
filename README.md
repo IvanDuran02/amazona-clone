@@ -48,3 +48,6 @@ In this update we created a cart and used react context to manage the state of i
 
 -- Version 1.11 --
 In this version we refined the add to cart feature, making it so duplicate items wont add to cart; and adding more than 1 item increments quantity until item is out of stock. we also added a unique ID to product data
+
+-- Version 1.12 --
+In this update we added a cart UI for users to view items in cart. In app.js we added a new route to /cart; we also added a useNavigate hook to the end of our addToCart button handler in ProductScreen.
