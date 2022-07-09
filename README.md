@@ -42,3 +42,9 @@ Implemented product details page. Updated webpage titles using helmet package, i
 
 -- Version 1.9 --
 Added loading spinner and error alert. loading spinner shows loading inbetween pages and error alert shows if product slug isn't found. Other than that we made a utils.js and put logic to grab error response from backend and deliver it for use in frontend.
+
+-- Version 1.10 --
+In this update we created a cart and used react context to manage the state of items in the cart. We created Store.js and made a StoreProvider to wrap our webapp. Other than that we just added and styled a cart in the navbar.
+
+-- Version 1.11 --
+In this version we refined the add to cart feature, making it so duplicate items wont add to cart; and adding more than 1 item increments quantity until item is out of stock. we also added a unique ID to product data
