@@ -67,3 +67,7 @@ We then use the map function to map our data.products into jsx and use the slug 
 # Version 1.13
 
 - Finished most of the button functionality (plus and minus quantity and remove item button) and also made it so adding to cart in the home screen adds to cart as well as making it show out of stock if all items are in your cart. Cart items are also stored in local storage now.
+
+# Version 1.14
+
+- Implemented UI for signin screen... thats pretty much it
