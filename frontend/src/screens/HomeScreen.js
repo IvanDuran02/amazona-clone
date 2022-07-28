@@ -48,6 +48,7 @@ function HomeScreen() {
     };
     fetchData();
   }, []);
+
   return (
     <div>
       <Helmet>

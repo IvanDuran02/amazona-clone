@@ -4,7 +4,9 @@ export const Store = createContext();
 
 const initialState = {
   cart: {
-    cartItems: [],
+    cartItems: localStorage.getItem("cartItems")
+      ? JSON.parse(localStorage.getItem("cartItems")) // If cartitems exist in local storage, convert to Javascript object and set to cartItems
+      : [], // else set to empty array
   },
 };
 
@@ -17,14 +19,20 @@ function reducer(state, action) {
       const cartItems = existItem
         ? state.cart.cartItems.map((item) => (item._id === existItem._id ? newItem : item))
         : [...state.cart.cartItems, newItem];
+      localStorage.setItem("cartItems", JSON.stringify(cartItems)); // converts cart items to string and saves to local storage
       return { ...state, cart: { ...state.cart, cartItems } }; // updates the cartitem based on cartItems variable
-
-    // keep all values in the field. then in the cart load all the values already in the cart and also add the new cartItem through action.payload
-    // return { ...state, cart: { ...state.cart, cartItems: [...state.cart.cartItems, action.payload] } };
+    case "CART_REMOVE_ITEM": {
+      const cartItems = state.cart.cartItems.filter((item) => item._id !== action.payload._id);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      return { ...state, cart: { ...state.cart, cartItems } };
+    }
     default:
       return state;
   }
 }
+
+// keep all values in the field. then in the cart load all the values already in the cart and also add the new cartItem through action.payload
+// return { ...state, cart: { ...state.cart, cartItems: [...state.cart.cartItems, action.payload] } };
 
 export function StoreProvider(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
