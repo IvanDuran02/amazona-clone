@@ -1,7 +1,18 @@
 import express from "express";
 import data from "./data.js"; // data is copied from the front-end
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
+// connect to mongodb database
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log("connected to mongodb");
+  })
+  .catch((err) => console.log(err.message));
 
 // when user goes to this address we return products to the front-end user
 app.get("/api/products", (req, res) => {

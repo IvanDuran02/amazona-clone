@@ -71,3 +71,8 @@ We then use the map function to map our data.products into jsx and use the slug 
 # Version 1.14
 
 - Implemented UI for signin screen... thats pretty much it
+
+# Version 1.15
+
+- Installed mongoose and dotenv
+- connected to mongoose and added URI to env file
