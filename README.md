@@ -83,7 +83,13 @@ We then use the map function to map our data.products into jsx and use the slug 
 - Seeded database with product data instead of using a static data.js file.
 - moved all routes in server.js into a routes directory
 
-# Version 1.16
+# Version 1.17
 
 - Insalled bcryptjs to encrypt passwords
 - Made sample User data and seeded in mongoDB
+
+# Version 1.18
+
+- Insalled express-async-handler to handle async errors
+- Installed jwtwebtoken to create and verify tokens
+- made a signin API that recieves a post requests and checks Database for user data. if user is found, it creates a token and sends it back to the user. if user is not found, it sends an error back to the user.
