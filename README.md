@@ -76,3 +76,9 @@ We then use the map function to map our data.products into jsx and use the slug 
 
 - Installed mongoose and dotenv
 - connected to mongoose and added URI to env file
+
+# Version 1.16
+
+- Created a ProductSchema for products to be stored in mongoDB
+- Seeded database with product data instead of using a static data.js file.
+- moved all routes in server.js into a routes directory
