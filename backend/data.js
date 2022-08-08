@@ -1,5 +1,23 @@
+import bcrypt from "bcryptjs"; // bcrypt is a hashing algorithm that is used to encrypt passwords
+
 const data = {
-  // we made an array of Objects
+  // sample users for testing
+  users: [
+    {
+      name: "John",
+      email: "admin@example.com",
+      password: bcrypt.hashSync("123456"), // hashes the password
+      isAdmin: true,
+    },
+    {
+      name: "Jane",
+      email: "jane@example.com",
+      password: bcrypt.hashSync("123456"),
+      isAdmin: false,
+    },
+  ],
+
+  //sample products for testing
   products: [
     {
       name: "Nike Slim Shirt",

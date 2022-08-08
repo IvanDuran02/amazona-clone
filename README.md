@@ -82,3 +82,8 @@ We then use the map function to map our data.products into jsx and use the slug 
 - Created a ProductSchema for products to be stored in mongoDB
 - Seeded database with product data instead of using a static data.js file.
 - moved all routes in server.js into a routes directory
+
+# Version 1.16
+
+- Insalled bcryptjs to encrypt passwords
+- Made sample User data and seeded in mongoDB
