@@ -97,3 +97,7 @@ We then use the map function to map our data.products into jsx and use the slug 
 # Version 1.19
 
 - Added signin State to store user data in local storage, and added a signin/signout button to the navbar. Navbar also show's user name if user is signed in, as well as order history with a dropdown menu.
+
+# Version 1.20
+
+- Completed basic functionality of Shipping Address page ex. Adding shipping address to local storage, removing items from cart and removing address from local storage on sign-out, Button in the shipping adress page now redirects to payment page, and some other small features.
