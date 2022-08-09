@@ -93,3 +93,7 @@ We then use the map function to map our data.products into jsx and use the slug 
 - Insalled express-async-handler to handle async errors
 - Installed jwtwebtoken to create and verify tokens
 - made a signin API that recieves a post requests and checks Database for user data. if user is found, it creates a token and sends it back to the user. if user is not found, it sends an error back to the user.
+
+# Version 1.19
+
+- Added signin State to store user data in local storage, and added a signin/signout button to the navbar. Navbar also show's user name if user is signed in, as well as order history with a dropdown menu.
