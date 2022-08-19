@@ -101,3 +101,7 @@ We then use the map function to map our data.products into jsx and use the slug 
 # Version 1.20
 
 - Completed basic functionality of Shipping Address page ex. Adding shipping address to local storage, removing items from cart and removing address from local storage on sign-out, Button in the shipping adress page now redirects to payment page, and some other small features.
+
+# Version 1.21
+
+- Added a signup screen with an api endpoint to create a new user.
