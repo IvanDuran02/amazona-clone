@@ -5,6 +5,7 @@ import Rating from "./Rating";
 import axios from "axios";
 import { useContext } from "react";
 import { Store } from "../Store";
+import "../card.css";
 
 function Product(props) {
   const { product } = props;
@@ -28,25 +29,72 @@ function Product(props) {
     ctxDispatch({ type: "CART_ADD_ITEM", payload: { ...item, quantity } });
   };
   return (
-    <Card>
-      <Link to={`/product/${product.slug}`}>
-        <img src={product.image} alt={product.name} className="card-img-top" />
-      </Link>
-      <Card.Body>
+    <div className="item group hover:scale-110 ">
+      <div className="img-box group-hover:scale-110 ">
         <Link to={`/product/${product.slug}`}>
-          <Card.Title>{product.name}</Card.Title>
+          <img
+            src={product.image}
+            alt={product.name}
+            className="scale-105 -mt-4"
+          />
         </Link>
-        <Rating rating={product.rating} numReviews={product.numReviews} />
-        <Card.Text>${product.price}</Card.Text>
+      </div>
+      <div className="details">
+        <h2>
+          Awesome Sunglasses
+          <br />
+          <span>Men's Collection</span>
+        </h2>
+        <div className="price">$149</div>
+        <label>Size</label>
+        <ul>
+          <li>55-14</li>
+          <li>58-14</li>
+          <li>62-14</li>
+        </ul>
+        <label>Color</label>
+        <ul className="colors">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
         {product.countInStock === quantity || product.countInStock === 0 ? (
-          <Button disabled variant="light">
+          <button
+            className="text-white w-[100%]"
+            onClick={() => alert("Selected Item is currently out of stock!")}
+          >
             Out of Stock
-          </Button>
+          </button>
         ) : (
-          <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
+          <button
+            onClick={() => addToCartHandler(product)}
+            className="text-white w-[100%]"
+          >
+            Add to cart
+          </button>
         )}
-      </Card.Body>
-    </Card>
+      </div>
+    </div>
   );
 }
 export default Product;
+
+// <Card>
+//   <Link to={`/product/${product.slug}`}>
+//     <img src={product.image} alt={product.name} className="card-img-top" />
+//   </Link>
+//   <Card.Body>
+//     <Link to={`/product/${product.slug}`}>
+//       <Card.Title>{product.name}</Card.Title>
+//     </Link>
+//     <Rating rating={product.rating} numReviews={product.numReviews} />
+//     <Card.Text>${product.price}</Card.Text>
+//     {product.countInStock === quantity || product.countInStock === 0 ? (
+//       <Button disabled variant="light">
+//         Out of Stock
+//       </Button>
+//     ) : (
+//       <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
+//     )}
+//   </Card.Body>
+// </Card>

@@ -1,0 +1,144 @@
+@use "https://use.fontawesome.com/releases/v5.7.2/css/all.css";
+@use "https://fonts.googleapis.com/css?family=Lato";
+
+.item body {
+  margin: 0;
+  padding: 0;
+  background: #ddd;
+  font-family: "Lato", sans-serif;
+  transition: 1s;
+}
+
+.item {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 1s;
+  margin: 20px 35px 20px 35px;
+}
+
+.item .img-box {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: 1s;
+}
+
+.details {
+  position: absolute;
+  bottom: -145px;
+  width: 100%;
+  background: #fff;
+  padding: 8px;
+  padding-top: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: 1s;
+}
+
+.details h2 {
+  margin-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.details h2 span {
+  font-size: 12px;
+  color: #bbb;
+  font-weight: normal;
+}
+
+.details .price {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 18px;
+}
+
+.item label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.item ul {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.item ul li {
+  list-style: none;
+  margin: 5px 5px 0;
+  font-size: 12px;
+  font-weight: normal;
+  color: #bbb;
+  transition: 0.7s;
+}
+
+.item ul li:hover {
+  cursor: pointer;
+  color: #333;
+  transition: 0.7s;
+}
+
+.item ul li:first-child {
+  margin-left: 0;
+}
+
+.item ul.colors li {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.item ul.colors li:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.item ul.colors li:nth-child(1) {
+  background: #9f8a42;
+}
+
+.item ul.colors li:nth-child(2) {
+  background: #acaea9;
+}
+
+.item ul.colors li:nth-child(3) {
+  background: #cd7f32;
+}
+
+.item button {
+  display: block;
+  padding: 5px;
+  color: #fff;
+  margin: 15px 0 0;
+  background: #333;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 1s;
+}
+
+.item button:hover {
+  background: #666;
+  transition: 1s;
+}
+
+.item:hover .details {
+  overflow: visible;
+  bottom: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  transition: 1s;
+}

@@ -63,13 +63,15 @@ function HomeScreen() {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <Row>
-            {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
-                <Product product={product}></Product>
-              </Col>
-            ))}
-          </Row>
+          <div className="flex justify-center ">
+            <div className="flex justify-center items-center min-h-[100vh] flex-wrap mx-8 max-w-[80%]">
+              {products.map((product) => (
+                <Col key={product.slug}>
+                  <Product product={product}></Product>
+                </Col>
+              ))}
+            </div>
+          </div>
         )}
       </div>
     </div>
