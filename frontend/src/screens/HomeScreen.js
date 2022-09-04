@@ -66,7 +66,10 @@ function HomeScreen() {
           <div className="flex justify-center ">
             <div className="flex justify-center items-center min-h-[100vh] flex-wrap mx-8 max-w-[80%]">
               {products.map((product) => (
-                <Col key={product.slug}>
+                <Col
+                  key={product.slug}
+                  className="flex justify-center items-center"
+                >
                   <Product product={product}></Product>
                 </Col>
               ))}
