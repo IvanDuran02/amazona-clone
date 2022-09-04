@@ -41,17 +41,13 @@ function Product(props) {
       </div>
       <div className="details">
         <h2>
-          Awesome Sunglasses
+          {product.name}
           <br />
-          <span>Men's Collection</span>
+          <span>Brand: {product.brand}</span>
         </h2>
-        <div className="price">$149</div>
-        <label>Size</label>
-        <ul>
-          <li>55-14</li>
-          <li>58-14</li>
-          <li>62-14</li>
-        </ul>
+        <div className="price">${product.price}</div>
+        <label>Ratings</label>
+        <Rating rating={product.rating} numReviews={product.numReviews} />
         <label>Color</label>
         <ul className="colors">
           <li></li>
